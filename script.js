@@ -48,14 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const commands = {
         profile: document.getElementById('profile-template').innerHTML,
         skills: document.getElementById('skills-template').innerHTML,
-        projects: document.getElementById('projects-template').innerHTML,
         experience: document.getElementById('experience-template').innerHTML,
+        achievements: document.getElementById('achievements-template').innerHTML,
+        certifications: document.getElementById('certifications-template').innerHTML,
         contact: document.getElementById('contact-template').innerHTML,
         help: document.getElementById('help-template').innerHTML,
     };
 
-    const commandsToRun = ['profile', 'skills', 'projects', 'experience', 'contact'];
-    const typingSpeed = 50;
+    const commandsToRun = ['profile', 'skills', 'certifications', 'achievements', 'experience', 'contact'];
+    const typingSpeed = 32;
     const commandDelay = 1000;
 
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));

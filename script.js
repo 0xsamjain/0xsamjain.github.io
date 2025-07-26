@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.height = window.innerHeight;
 
     const particles = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 160; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         r: Math.random() * 2 + 1,
-        dx: (Math.random() - 0.5) * 0.5,
-        dy: (Math.random() - 0.5) * 0.5
+        dx: (Math.random() - 0.5) * 1.6,
+        dy: (Math.random() - 0.5) * 1.6
       });
     }
 

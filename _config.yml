@@ -1,0 +1,51 @@
+title: "0xsamjain" # The site title
+lang: en-GB # The site language
+encoding: utf-8
+description: "An amazing website" # The description of the site
+copyright: "© It belongs to me." # The mentions that appear in the site's footer
+url: "" # The base hostname for you site, e.g. http://mysite.com
+baseurl: "/simply-cyan-theme" # The subpath of your site, e.g. /blog
+repo:
+email: jsamm291@gmail.com
+
+darkmode: true # Allows the switch between dark and light mode
+typosize: true # Allows to change the size of the font
+home-posts-limit: 10 # Change the limit of posts displayed on the home page
+
+# 3. IGNORED FILES WHILE building
+# These files are essential to the building of your website, but you don't want them to be built with the others
+exclude:
+  - README.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - simply-cyan.gemspec
+  - .jekyll-cache
+  - LICENSE.txt
+  - CODE_OF_CONDUCT.md
+
+# 4. Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+
+remote_theme: PQuod/simply-cyan-theme
+
+# 5. Collections
+# Authors's list
+collections:
+  categories:
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: category
+    values:
+      layout: "categories"
+
+# 6. Jekyll settings
+permalink: pretty # Permalink will be /YYY/MM/DD/page-name/
+timezone: Europe/London
+

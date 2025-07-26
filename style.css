@@ -1,0 +1,160 @@
+/* === style.css === */
+:root {
+  /* Catppuccin Mocha Palette */
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #313244;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--crust);
+  color: var(--text);
+  position: relative;
+}
+
+canvas#glitchCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: linear-gradient(to bottom, var(--crust), var(--mantle));
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.glitch {
+  font-size: 2.5rem;
+  position: relative;
+  color: var(--text);
+  text-shadow: 2px 0 var(--mauve), -2px 0 var(--lavender);
+  animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 var(--mauve), -2px 0 var(--lavender); }
+  20% { text-shadow: -2px 0 var(--lavender), 2px 0 var(--mauve); }
+  40% { text-shadow: 2px 2px var(--mauve), -2px -2px var(--lavender); }
+  60% { text-shadow: 2px -2px var(--mauve), -2px 2px var(--lavender); }
+  80% { text-shadow: -2px -2px var(--mauve), 2px 2px var(--lavender); }
+  100% { text-shadow: 2px 0 var(--mauve), -2px 0 var(--lavender); }
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--red);
+  text-shadow: 1px 1px var(--crust);
+}
+
+/* Terminal Command UI */
+#terminal {
+  font-family: monospace;
+  background: rgba(24, 24, 37, 0.8); /* Mantle with transparency */
+  border: 1px solid var(--surface1);
+  padding: 1rem;
+  margin-top: 2rem;
+  color: var(--text);
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(180, 190, 254, 0.2); /* Lavender shadow */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+  color: var(--green);
+  margin-right: 0.5em;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2em;
+    background-color: var(--green);
+    animation: blink 1s step-end infinite;
+    box-shadow: 0 0 5px var(--green);
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Styles for content printed inside the terminal */
+#terminal-output section {
+  background: rgba(49, 50, 68, 0.6); /* Surface0 with transparency */
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--surface1);
+  border-radius: 8px;
+}
+
+#terminal-output h2 {
+  font-family: 'DotGothic16', sans-serif;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+#terminal-output ul {
+    padding-left: 20px;
+}
+
+#terminal-output ul li {
+  color: var(--teal); /* Changed */
+  list-style-type: square;
+  margin-bottom: 0.5rem;
+}
+
+#terminal-output a {
+  color: var(--sky);
+  text-decoration: none;
+}
+#terminal-output a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 5px var(--sky);
+}
+
+/* Highlight color for strong tags */
+#terminal-output strong {
+    color: var(--yellow);
+    font-weight: normal;
+}

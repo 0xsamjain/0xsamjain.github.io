@@ -48,12 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const commands = {
         profile: document.getElementById('profile-template').innerHTML,
         skills: document.getElementById('skills-template').innerHTML,
-        experience: document.getElementById('experience-template').innerHTML,
-        achievements: document.getElementById('achievements-template').innerHTML,
         certifications: document.getElementById('certifications-template').innerHTML,
+        achievements: document.getElementById('achievements-template').innerHTML,
+        experience: document.getElementById('experience-template').innerHTML,
         contact: document.getElementById('contact-template').innerHTML,
-        help: document.getElementById('help-template').innerHTML,
-    };
+        };
 
     const commandsToRun = ['profile', 'skills', 'certifications', 'achievements', 'experience', 'contact'];
     const typingSpeed = 32;
